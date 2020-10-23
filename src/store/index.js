@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
-// import SecureLS from 'secure-ls';
-// const ls = new SecureLS({ isCompression: false });
 
 Vue.use(Vuex);
 
@@ -20,24 +18,11 @@ export default new Vuex.Store({
   modules: {},
   plugins: [
     createPersistedState({
-      // 1.SecureLS
-      // storage: {
-      //   getItem: key => ls.get(key),
-      //   setItem: (key, value) => ls.set(key, value),
-      //   removeItem: key => ls.remove(key)
-      // },
-      //2.localStorage
-      // storage: {
-      //   getItem: key => localStorage.getItem(key),
-      //   setItem: (key, value) => localStorage.getItem(key, value),
-      //   removeItem: key => localStorage.removeItem(key)
-      // },
-      //2.sessionStorage
-      storage: {
-        getItem: key => sessionStorage.getItem(key),
-        setItem: (key, value) => sessionStorage.getItem(key, value),
-        removeItem: key => sessionStorage.removeItem(key)
-      }
+      key:'vuexData',
+      //1.localStorage
+      // storage: window.localStorage,
+      // 2.sessionStorage
+      storage: window.sessionStorage
     })
   ]
 });
