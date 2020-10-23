@@ -56,6 +56,15 @@ export default {
     deleteString() {
       this.$store.commit('myString');
     }
+  },
+  watch: {
+    string: {
+      handler(newVal) {
+        console.log('string newVal :>> ', newVal);
+      },
+      immediate: true,
+      deep: true
+    }
   }
 };
 </script>
