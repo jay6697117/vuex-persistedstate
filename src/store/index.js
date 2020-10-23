@@ -29,8 +29,8 @@ export default new Vuex.Store({
       //2.localStorage
       // storage: {
       //   getItem: key => localStorage.getItem(key),
-      //   setItem: (key, value) => ls.getItem(key, value),
-      //   removeItem: key => ls.removeItem(key)
+      //   setItem: (key, value) => localStorage.getItem(key, value),
+      //   removeItem: key => localStorage.removeItem(key)
       // },
       //2.sessionStorage
       storage: {
