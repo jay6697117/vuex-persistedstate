@@ -1,4 +1,4 @@
-# test-vuex-storage
+# vuex-persistedstate 练手demo
 
 ## Project setup
 ```
